@@ -4,17 +4,20 @@ import {
   StyledContacts,
 } from 'components/ContactForm/ContactForm.styled';
 
-export const ContactList = ({ filteredContacts, onDeleteContact }) => {
+export const ContactList = ({ filteredContacts, deleteContact }) => {
   return (
-    <StyledContacts>
-      {filteredContacts.map(contact => (
-        <li key={contact.id}>
-          {contact.name}: {contact.number}
-          <Button onClick={() => onDeleteContact(contact.id)} type="button">
-            Delete
-          </Button>
-        </li>
-      ))}
-    </StyledContacts>
+    <>
+      <ul>
+        <StyledContacts>
+          {filteredContacts.map(contact => (
+            <ContactElem
+              key={contact.id}
+              {...contact}
+              deleteContact={deleteContact}
+            />
+          ))}
+        </StyledContacts>
+      </ul>
+    </>
   );
 };

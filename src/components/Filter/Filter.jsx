@@ -1,5 +1,4 @@
 import {
-  StyledContacts,
   StyledInput,
   StyledTitle,
 } from 'components/ContactForm/ContactForm.styled';

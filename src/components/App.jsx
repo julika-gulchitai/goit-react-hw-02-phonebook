@@ -18,7 +18,7 @@ export class App extends React.Component {
     number: '',
   };
 
-  handleAddUser = ({ name, number }) => {
+  handleAddUser = (name, number) => {
     if (this.state.contacts.some(contact => contact.name === name)) {
       alert('Contact has already added!');
       return;
@@ -33,7 +33,7 @@ export class App extends React.Component {
   };
   getFiltredContacts = () => {
     return this.state.contacts.filter(contact =>
-      contact.name.toLocaleLowerCase().includes(this.state.filter.toLowerCase())
+      contact.name.toLowerCase().includes(this.state.filter.toLowerCase())
     );
   };
   handleDeleteContact = id => {
@@ -44,7 +44,8 @@ export class App extends React.Component {
 
   render() {
     const { filter } = this.state;
-    console.log(this.getFiltredContacts());
+    console.log(this.state.contacts);
+
     return (
       <Container>
         <StyledTitle>Phonebook</StyledTitle>
@@ -52,8 +53,8 @@ export class App extends React.Component {
         <StyledTitle style={{ fontSize: '30px' }}>Contacts</StyledTitle>
         <Filter filter={filter} handleInputChange={this.handleSetFilter} />
         <ContactList
-          filteredContacts={this.getFiltredContacts()}
-          onDeleteContact={this.handleDeleteContact}
+          filteredContacts={this.state.contacts}
+          deleteContact={this.handleDeleteContact}
         />
       </Container>
     );

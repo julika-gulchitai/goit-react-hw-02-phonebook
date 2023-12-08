@@ -4,13 +4,13 @@ export const Container = styled.div`
   display: flex;
   border: 1px solid lightblue;
   flex-direction: column;
-gap: 20px
+  gap: 20px
   margin: 0 auto;
   justify-content: center;
    height: '100vh';
-          display: 'flex';
-          align-items: center;
-          font-size: 20px;
+   display: 'flex';
+   align-items: center;
+   font-size: 20px;
   
 `;
 export const StyledForm = styled.form`
@@ -45,7 +45,7 @@ export const StyledBtn = styled.button`
 export const StyledInput = styled.input`
   padding: 5px 10px;
   font-size: 10px;
-
+  width: 230px;
   border: none;
   outline: none;
   border: 0.5px solid;

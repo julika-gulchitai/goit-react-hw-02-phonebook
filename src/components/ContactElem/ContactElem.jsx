@@ -5,10 +5,15 @@ import {
 } from 'components/ContactForm/ContactForm.styled';
 import React from 'react';
 
-export const ContactElem = ({ name, number, id }) => {
+export const ContactElem = ({ name, number, id, deleteContact }) => {
   return (
-    <li>
-      <StyledContacts key={id}>*</StyledContacts>
-    </li>
+    <>
+      <div>
+        {name}: {number}{' '}
+      </div>
+      <Button type="button" onClick={() => deleteContact(id)}>
+        Delete
+      </Button>
+    </>
   );
 };

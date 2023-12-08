@@ -10,7 +10,6 @@ export const Container = styled.div`
    display: flex;
    align-items: center;
    font-size: 18px;
-  
 `;
 export const StyledForm = styled.form`
   border: 1px solid lightblue;

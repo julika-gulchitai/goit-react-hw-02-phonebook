@@ -1,8 +1,5 @@
 import { ContactElem } from 'components/ContactElem/ContactElem';
-import {
-  Button,
-  StyledContactsList,
-} from 'components/ContactForm/ContactForm.styled';
+import { StyledContactsList } from 'components/ContactForm/ContactForm.styled';
 
 export const ContactList = ({ filteredContacts, deleteContact }) => {
   return (

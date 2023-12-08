@@ -4,8 +4,6 @@ import {
   StyledForm,
   StyledInput,
   StyledLabel,
-  StyledTitle,
-  Button,
 } from './ContactForm.styled';
 import React from 'react';
 
@@ -40,25 +38,29 @@ export class ContactForm extends React.Component {
     const { name, number } = this.state;
     return (
       <StyledForm onSubmit={this.handleSubmit}>
-        <input
-          name="name"
-          value={name}
-          type="text"
-          onChange={this.handleInputChange}
-          placeholder="name"
-          required
-        ></input>
-
-        <input
-          name="number"
-          value={number}
-          type="tel"
-          onChange={this.handleInputChange}
-          placeholder="phone number"
-          required
-        ></input>
-
-        <Button>Add contacts</Button>
+        <StyledLabel>
+          {'Name'}
+          <StyledInput
+            name="name"
+            value={name}
+            type="text"
+            onChange={this.handleInputChange}
+            placeholder="name"
+            required
+          ></StyledInput>
+        </StyledLabel>
+        <StyledLabel>
+          {'Number'}
+          <StyledInput
+            name="number"
+            value={number}
+            type="tel"
+            onChange={this.handleInputChange}
+            placeholder="phone number"
+            required
+          ></StyledInput>
+        </StyledLabel>
+        <StyledBtn>Add contacts</StyledBtn>
       </StyledForm>
     );
   }

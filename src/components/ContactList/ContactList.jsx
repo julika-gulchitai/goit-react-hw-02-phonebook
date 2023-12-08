@@ -1,14 +1,14 @@
 import { ContactElem } from 'components/ContactElem/ContactElem';
 import {
   Button,
-  StyledContacts,
+  StyledContactsList,
 } from 'components/ContactForm/ContactForm.styled';
 
 export const ContactList = ({ filteredContacts, deleteContact }) => {
   return (
     <>
       <ul>
-        <StyledContacts>
+        <StyledContactsList>
           {filteredContacts.map(contact => (
             <ContactElem
               key={contact.id}
@@ -16,7 +16,7 @@ export const ContactList = ({ filteredContacts, deleteContact }) => {
               deleteContact={deleteContact}
             />
           ))}
-        </StyledContacts>
+        </StyledContactsList>
       </ul>
     </>
   );

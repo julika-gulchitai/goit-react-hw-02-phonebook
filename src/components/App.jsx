@@ -2,7 +2,11 @@ import React from 'react';
 import { ContactList } from './ContactList/ContactList';
 import { ContactForm } from './ContactForm/ContactForm';
 import { Filter } from './Filter/Filter';
-import { Container, StyledTitle } from './ContactForm/ContactForm.styled';
+import {
+  Container,
+  StyledTitle,
+  StyledTitles,
+} from './ContactForm/ContactForm.styled';
 import { nanoid } from 'nanoid';
 
 export class App extends React.Component {
@@ -44,16 +48,15 @@ export class App extends React.Component {
 
   render() {
     const { filter } = this.state;
-    console.log(this.state.contacts);
 
     return (
       <Container>
         <StyledTitle>Phonebook</StyledTitle>
         <ContactForm onContactAdd={this.handleAddUser} />
-        <StyledTitle style={{ fontSize: '30px' }}>Contacts</StyledTitle>
+        <StyledTitles>Contacts</StyledTitles>
         <Filter filter={filter} handleInputChange={this.handleSetFilter} />
         <ContactList
-          filteredContacts={this.state.contacts}
+          filteredContacts={this.getFiltredContacts()}
           deleteContact={this.handleDeleteContact}
         />
       </Container>

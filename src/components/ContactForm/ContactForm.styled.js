@@ -4,21 +4,20 @@ export const Container = styled.div`
   display: flex;
   border: 1px solid lightblue;
   flex-direction: column;
-  gap: 20px
+  gap: 10px
   margin: 0 auto;
   justify-content: center;
-   height: '100vh';
-   display: 'flex';
+   display: flex;
    align-items: center;
-   font-size: 20px;
+   font-size: 18px;
   
 `;
 export const StyledForm = styled.form`
   border: 1px solid lightblue;
   background-color: #c9ddf0;
   box-shadow: 2px 2px 7px 3px lightgray;
-  width: calc((10vh + 10vw) * 1.1);
-  padding: 40px 20px;
+  width: 300px;
+  padding: 20px 20px;
   border-radius: 12px;
   display: flex;
   flex-direction: column;
@@ -26,16 +25,29 @@ export const StyledForm = styled.form`
 
 export const StyledTitle = styled.h2`
   color: #4d5a66;
-  font-size: 40px;
+  font-size: 30px;
 `;
-
+export const StyledTitles = styled.h4`
+  color: #4d5a66;
+  font-size: 25px;
+  margin-bottom: 0px;
+`;
+export const StyledText = styled.h6`
+  color: #4d5a66;
+  font-size: 15px;
+  margin-bottom: 7px;
+  margin-top: 7px;
+`;
 export const StyledBtn = styled.button`
-  padding: 10px 10px;
-  margin-top: 20px;
+  cursor: pointer;
+  display: block;
+  padding: 5px 10px;
+  margin-top: 5px;
   border-radius: 10px;
   background: #71b4f7;
   color: white;
-  font-size: 20px;
+  font-size: 15px;
+  width: 130px;
   border: 1px solid lightblue;
   &:hover {
     background: #72b39c;
@@ -43,33 +55,31 @@ export const StyledBtn = styled.button`
   }
 `;
 export const StyledInput = styled.input`
-  padding: 5px 10px;
+  display: block;
+  padding: 7px 10px;
   font-size: 10px;
   width: 230px;
-  border: none;
-  outline: none;
   border: 0.5px solid;
-  margin-bottom: 10px;
+  border-radius: 4px
+  margin-bottom: 20px;
 `;
 export const StyledLabel = styled.label`
+  font-size: 10px;
   display: flex;
   flex-direction: column;
   font-weight: bold;
   color: grey;
+  margin-bottom: 7px;
 `;
-export const StyledContacts = styled.li`
+export const StyledContactsList = styled.li`
   color: grey;
   text-decoration: none;
+  display: block;
+  width: 400px;
 `;
 
-export const Button = styled.button`
-  cursor: pointer;
-  padding: 5px 20px;
-  font-size: 10px;
-  background: #a3d1c1;
-  border: none;
-  outline: none;
-  border: 0.5px solid;
-  margin-bottom: 10px;
-  border-radius: 10px;
+export const StyledContacts = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 `;
